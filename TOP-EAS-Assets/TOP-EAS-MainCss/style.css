@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Merienda&display=swap');
+
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ecf0f3;
+  font-family: 'Merienda', cursive;
+  font-weight: bolder;
+}
+
+.main-container {
+  width: 45%;
+  height: auto;
+  display: block;
+  margin: 50px auto;
+  padding: 0 50px;
+  color: #a27700;
+  text-shadow: 0 0 1px #000000;
+  background: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1,
+              -13px -13px 20px #ffffff;
+  border-radius: 20px;
+}
+
+.secdiv-con {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.secdiv-con1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.secdiv-h2,
+ .secdiv-h2 {
+  padding: 0 10px;
+  text-shadow: 0 0 2px #000000;
+}
+
+.secdiv-h1 {
+  font-family: 'Fuggles', cursive;
+  font-size: 4rem;
+  padding: 0 20px;
+  text-shadow: 0 0 2px #000000;
+}
+
+.secdiv-con2 {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  border: 5px solid #e1e6ec;
+  border-radius: 20px;
+}
+
+.secdiv-grids {
+  width: 100%;
+  height: 575px;
+  display: inline-grid;
+  grid-template-columns: repeat(16, 2fr);
+  grid-template-rows: repeat(16, 2fr);
+  border-radius: 5px;
+}
+
+.grid-divs {
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: inset 5px 5px 20px #cbced1;
+}
+
+.grid-divs.animated {
+  animation: shimmer 1s infinite alternate ease-in-out;
+}
+
+@keyframes shimmer {
+  to { filter: hue-rotate(60deg); }
+}
+
+.settings-con {
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.set-input-con {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.set-label {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+.set-input {
+  width: 150px;
+  height: 50px;
+  outline: none;
+  border-radius: 10px;
+  background: none;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #e1e7ec;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;
+}
+
+.random-color {
+  font-size: 1rem;
+}
+
+.reset-btn {
+  font-size: 1.2rem;
+}
+
+.reset-btn, .random-color {
+  width: 90px;
+  height: 90px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Merienda', cursive;
+  font-weight: bolder;
+  color: #a27700;
+  text-shadow: 0 0 1px #000000;
+  box-shadow: 0 0 2px #5f5f5f,
+              0 0 0 5px #ecf0f3,
+              8px 8px 15px #a7aaaf,
+              -8px -8px 15px #ffffff;
+}
+
+.reset-btn:hover, .random-color:hover {
+  transform: scale(1.1);
+}
+
+.reset-btn:active, .random-color:active {
+  transform: scale(1);
+}
+
+/* MEDIA QUERYS */
+/*  Tablets in landscape mode, older desktop monitors */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .main-container {
+    width: 60%;
+  }
+
+  .reset-btn, .random-color {
+    padding: 5px;
+  }
+}
+
+/*  Tablets in portrait mode, large display smartphones landscape mode */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .main-container {
+    width: 70%;
+  }
+
+  .secdiv-grids {
+    height: 575px;
+  }
+
+  .reset-btn, .random-color {
+    padding: 5px;
+  }
+}
+
+  /*  Smartphones in landscape mode */
+@media screen and (min-width: 421px) and (max-width: 767px) {
+  :root {
+    font-size: 9px;
+  }
+
+  .main-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .secdiv-h1 {
+    padding: 0 10px;
+  }
+
+  .secdiv-grids {
+    height: 475px;
+  }
+
+  .set-input {
+    width: 100px;
+    height: 40px;
+  }
+
+  .reset-btn, .random-color {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/*  Smartphones in portrait mode  */
+@media screen and (max-width: 420px) {
+  :root {
+    font-size: 9px;
+  }
+
+  .main-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .secdiv-h1 {
+    padding: 0 5px;
+  }
+
+  .secdiv-grids {
+    height: 400px;
+  }
+
+  .set-input {
+    width: 100px;
+    height: 40px;
+  }
+
+  .reset-btn, .random-color {
+    width: 60px;
+    height: 60px;
+  }
+}
